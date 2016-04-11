@@ -4,15 +4,12 @@
         the function name is check_space_bracket
         this function should be execute before fix_comma
 '''
+from src.sub_funs import fix_comma_file, fix_strdoc_file, fix_space_word_file, fix_tail_spaces_file
+
 __author__ = 'zhangchao'
 import re
 import os
 import os.path
-import fix_cmp_file
-import fix_comma_file
-import fix_strdoc_file
-import fix_space_word_file
-import fix_tail_spaces_file
 #(4).delete tail spaces
 def check_tail_spaces(file_path):
     '''delete tail spaces'''
