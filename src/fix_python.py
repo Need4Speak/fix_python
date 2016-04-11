@@ -2,7 +2,7 @@
    version: 1.5
    new: add delete spaces around the word in (...)
         the function name is check_space_bracket
-        this function should be execute before check_comma
+        this function should be execute before fix_comma
 '''
 __author__ = 'zhangchao'
 import re
@@ -11,7 +11,7 @@ import os.path
 import ass_cmp_file
 
 #(1).format_comma()
-def check_comma(file_path):
+def fix_comma(file_path):
     '''read python file, check and format one line by anther'''
     try:
         file_comma = open(file_path, 'r+')
@@ -143,6 +143,6 @@ for parent, dirnames, filenames in os.walk(rootdir):
         #ass_cmp_file.check_ass_cmp(file_name) not complete
         check_tail_spaces(file_name)
         check_space_bracket(file_name)
-        check_comma(file_name)
+        fix_comma(file_name)
         check_strdoc(file_name)
 
