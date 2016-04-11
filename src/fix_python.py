@@ -39,11 +39,11 @@ for parent, dirnames, filenames in os.walk(rootdir):
         print "parent is:" + parent
         print "filename is:" + filename
         print "the full name of the file is:" + os.path.join(parent, filename)
-        file_name = os.path.join(parent, filename)
-        #file_name='test.py'
-        #ass_cmp_file.check_ass_cmp(file_name) not complete
-        fix_tail_spaces_file.fix_tail_spaces(file_name)
-        fix_space_word_file.fix_space_bracket(file_name)
-        fix_comma_file.fix_comma(file_name)
-        fix_strdoc_file.fix_strdoc(file_name)
+        file_path = os.path.join(parent, filename)
+        #file_path='test.py'
+        #ass_cmp_file.check_ass_cmp(file_path) not complete
+        fix_tail_spaces_file.fix_tail_spaces(file_path)
+        fix_space_word_file.fix_space_bracket(file_path)
+        fix_comma_file.fix_comma(file_path)
+        fix_strdoc_file.fix_strdoc(file_path, filename)
 
